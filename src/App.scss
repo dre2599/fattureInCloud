@@ -5,6 +5,7 @@ $color-blue-dark: #0D97D5;
 $color-price: #00875A;
 $font-size-default: 12px;
 $color-blue-light: #C6E7F5;
+
 // imports
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 .container-recap {
@@ -89,7 +90,7 @@ $color-blue-light: #C6E7F5;
         color: $color-blue-dark;
     }
     .msg{
-        font-size: $font-size-default;
+        font-size: 16px;
         font-weight: 500;
         color: $color-price;
         margin-top: 0;
