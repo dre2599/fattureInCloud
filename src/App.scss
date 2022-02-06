@@ -1,0 +1,97 @@
+// variables
+$color-border: #EBEDEE;
+$color-level: #E0F1EB;
+$color-blue-dark: #0D97D5;
+$color-price: #00875A;
+$font-size-default: 12px;
+$color-blue-light: #C6E7F5;
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+.container-recap {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.recap-detail {
+    display: block;
+    border: 1px solid $color-border;
+    border-inline-start-width: 0;
+    width: 80px;
+    box-sizing: border-box;
+    position: relative;
+    &:first-of-type {
+        border-inline-start-width: 1px;
+    }
+    &.selected {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 2px;
+            background-color: $color-blue-dark;
+            border-block-start: 1px solid $color-blue-light;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+        }
+    }
+    &__month {
+        border-block-end: 1px solid $color-border;
+        height: 30px;
+        padding: 8px;
+        p {
+            font-size: $font-size-default;
+            font-weight: 500;
+            margin: 0;
+            color: $color-blue-dark;
+        }
+    }
+    &__invoice {
+        width: 80px;
+        max-height: 80px;
+        padding: 8px;
+        position: relative;
+        font-size: $font-size-default;
+        font-weight: 500;
+        color: $color-blue-dark;
+    }
+    &__docs {
+        margin-top: 32px;
+        margin-bottom: 5px;
+    }
+    &__amount {
+        color: $color-price;
+        margin-top: 0;
+    }
+    &__level {
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        background-color: $color-level;
+        height: var(--itemHeight);
+        z-index: -1;
+    }
+    >* {
+        box-sizing: border-box;
+    }
+}
+
+.client-msg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    p{
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-blue-dark;
+    }
+    .msg{
+        font-size: $font-size-default;
+        font-weight: 500;
+        color: $color-price;
+        margin-top: 0;
+    }
+}
